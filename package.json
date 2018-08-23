@@ -19,6 +19,8 @@
         "vscode": "^1.26.0"
     },
     "categories": [
+        "Formatters",
+        "Keymaps",
         "Other"
     ],
     "activationEvents": [

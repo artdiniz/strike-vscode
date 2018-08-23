@@ -2,7 +2,7 @@
 
 import * as vscode from 'vscode';
 
-import {strike} from './model/Strike'
+import {toggleStrike} from './model/Strike'
 
 import Selection = vscode.Selection
 import Range = vscode.Range
@@ -36,7 +36,7 @@ function processSelection(formatCB: (text: string)=>string) {
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand('extension.strike.strikethrough', () => {
-        processSelection(strike)
+        processSelection(toggleStrike)
     })
     context.subscriptions.push(disposable)
 }

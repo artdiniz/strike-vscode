@@ -1,14 +1,14 @@
-# strike README
+# Strike for VSCode
 
-Strike'em All!
+Strikethrough text in a breeze
 
 ## Features
 
-Generate strikethrough text from selected text.
+Toggle strikethrough text from selected text.
 
 You can either use this extension searching for "Strikethrough selected text" in Command Pallete or hitting `⌘K + S`.
 
-![Strikethrough text with keyboard shortcut](images/strikethrough-in-action.png\)
+![Strikethrough text with keyboard shortcut](images/strikethrough-in-action.gif)
 
 ## Release Notes
 

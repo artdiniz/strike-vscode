@@ -12,8 +12,10 @@ You can either use this extension searching for "Strikethrough selected text" in
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial release of Strike
+
+## Credits
+
+This [extension's icon](https://github.com/artdiniz/strike-vscode/blob/master/images/icon.png) was made by [Freepik](http://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/).

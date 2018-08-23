@@ -20,7 +20,13 @@
                 "command": "extension.strike.strikethrough",
                 "title": "Strikethrough selected text"
             }
-        ]
+        ],
+        "keybindings":{
+            "command": "extension.strike.strikethrough",
+            "key": "ctrl+k s",
+            "mac": "cmd+k s",
+            "when": "editorHasSelection"
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

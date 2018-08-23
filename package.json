@@ -1,12 +1,13 @@
 {
-    "name": "strike",
-    "displayName": "strike",
+    "name": "strike-vscode",
+    "displayName": "Strike for VSCode",
     "description": "Strikethrough text in a breeze",
     "version": "0.0.1",
-    "publisher": "artdiniz",
+    "publisher": "Artur Diniz Adam",
     "engines": {
         "vscode": "^1.26.0"
     },
+    "icon": "images/icon.png",
     "categories": [
         "Other"
     ],

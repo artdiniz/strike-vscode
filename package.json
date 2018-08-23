@@ -2,12 +2,22 @@
     "name": "strike-vscode",
     "displayName": "Strike for VSCode",
     "description": "Strikethrough text in a breeze",
-    "version": "0.0.1",
-    "publisher": "Artur Diniz Adam",
+    "version": "1.0.0",
+    "publisher": "artdiniz",
+    "author": {
+        "name": "Artur Diniz Adam",
+        "email": "artur.daz+vscodemarketplace@gmail.com"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/artdiniz/strike-vscode/blob/master/README.md",
+    "repository": {
+       "type": "git",
+       "url": "https://github.com/artdiniz/strike-vscode" 
+    },
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.26.0"
     },
-    "icon": "images/icon.png",
     "categories": [
         "Other"
     ],

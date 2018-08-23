@@ -35,11 +35,9 @@ function processSelection(formatCB: (text: string)=>string) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-
     let disposable = vscode.commands.registerCommand('extension.strike.strikethrough', () => {
         processSelection(strike)
     })
-
     context.subscriptions.push(disposable)
 }
 

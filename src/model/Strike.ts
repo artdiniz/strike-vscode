@@ -1,6 +1,6 @@
 function strike(text: string): string {
     return text.split('')
-        .map(char => char + '\u0336')
+        .map(char => char.match(/\S/) ? char + '\u0336' : char)
         .join('')
 }
 

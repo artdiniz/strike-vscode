@@ -18,7 +18,7 @@ suite("Strike", function () {
     test("transforms normal text into striketrough text", function() {
         assert.equal(
             toggleStrike("this test works!")
-            ,"t̶h̶i̶s̶ ̶t̶e̶s̶t̶ ̶w̶o̶r̶k̶s̶!̶"
+            ,"t̶h̶i̶s̶ t̶e̶s̶t̶ w̶o̶r̶k̶s̶!̶"
         )
     })
 
@@ -33,6 +33,26 @@ suite("Strike", function () {
         assert.equal(
             toggleStrike("this ̶t̶est̶ w̶o̶rk̶s̶!̶")
             ,"this test works!"
+        )
+    })
+
+    test("ignores boundary chars", function(){
+        assert.equal(
+            toggleStrike(" boundary ")
+            ," b̶o̶u̶n̶d̶a̶r̶y̶ "
+        )
+    })
+
+    test("ignores boundary chars in multiline strings", function(){
+        assert.equal(
+            toggleStrike(`
+                boundary 
+                boundary
+            `)
+            ,(`
+                b̶o̶u̶n̶d̶a̶r̶y̶ 
+                b̶o̶u̶n̶d̶a̶r̶y̶
+            `)
         )
     })
 })

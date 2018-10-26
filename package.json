@@ -24,7 +24,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.strike.strikethrough"
+        "*"
     ],
     "main": "./out/extension",
     "contributes": {

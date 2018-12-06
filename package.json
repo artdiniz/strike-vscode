@@ -11,8 +11,8 @@
     "license": "MIT",
     "homepage": "https://github.com/artdiniz/strike-vscode/blob/master/README.md",
     "repository": {
-       "type": "git",
-       "url": "https://github.com/artdiniz/strike-vscode" 
+        "type": "git",
+        "url": "https://github.com/artdiniz/strike-vscode"
     },
     "icon": "images/icon.png",
     "engines": {
@@ -28,13 +28,23 @@
     ],
     "main": "./out/extension",
     "contributes": {
+        "configuration": {
+            "title": "Strike",
+            "properties": {
+                "strike.whitespace": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Wheter to srtike whitespace chars or not"
+                }
+            }
+        },
         "commands": [
             {
                 "command": "extension.strike.strikethrough",
                 "title": "Strikethrough selected text"
             }
         ],
-        "keybindings":{
+        "keybindings": {
             "command": "extension.strike.strikethrough",
             "key": "ctrl+k s",
             "mac": "cmd+k s",
@@ -49,10 +59,12 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.21",
-        "tslint": "^5.8.0",
+        "@types/common-tags": "^1.4.0",
+        "@types/mocha": "^2.2.42",
         "@types/node": "^8.10.25",
-        "@types/mocha": "^2.2.42"
+        "common-tags": "^1.8.0",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21"
     }
 }

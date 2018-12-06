@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-import * as vscode from 'vscode';
+import * as vscode from 'vscode'
 
 import {toggleStrike} from './model/Strike'
 
@@ -11,32 +11,35 @@ import Window = vscode.window
 
 function processSelection(formatCB: (text: string)=>string) {
     if(Window.activeTextEditor){
-        let e: vscode.TextEditor = Window.activeTextEditor
-        let d: vscode.TextDocument = e.document
-        let sel = e.selections
+        let activeEditor: vscode.TextEditor = Window.activeTextEditor
+        let document: vscode.TextDocument = activeEditor.document
+        let selections = activeEditor.selections
         
-        var replaceRanges: Selection[] = [];
-        e.edit(function (edit) {
+        var replaceRanges: Selection[] = []
+
+        activeEditor.edit(function (edit) {
             // itterate through the selections
-            for (var x = 0; x < sel.length; x++) {
-                let txt: string = d.getText(new Range(sel[x].start, sel[x].end))
+            for (var x = 0; x < selections.length; x++) {
+                let txt: string = document.getText(new Range(selections[x].start, selections[x].end))
 
                 txt = formatCB(txt)
     
                 //replace the txt in the current select and work out any range adjustments
-                edit.replace(sel[x], txt)
-                let startPos: Position = new Position(sel[x].start.line, sel[x].start.character)
-                let endPos: Position = new Position(sel[x].start.line + txt.split(/\r\n|\r|\n/).length - 1, sel[x].start.character + txt.length)
+                edit.replace(selections[x], txt)
+                let startPos: Position = new Position(selections[x].start.line, selections[x].start.character)
+                let endPos: Position = new Position(selections[x].start.line + txt.split(/\r\n|\r|\n/).length - 1, selections[x].start.character + txt.length)
                 replaceRanges.push(new Selection(startPos, endPos))
             }
         })
-        e.selections = replaceRanges
+        activeEditor.selections = replaceRanges
     }
 }
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand('extension.strike.strikethrough', () => {
-        processSelection(toggleStrike)
+        const doStrikeWhitespace = Boolean(vscode.workspace.getConfiguration('strike').get("whitespace"))
+
+        processSelection((text) => toggleStrike(text, {strikeWhitespace: doStrikeWhitespace}))
     })
     context.subscriptions.push(disposable)
 }

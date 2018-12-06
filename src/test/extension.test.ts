@@ -1,58 +1,88 @@
-//
-// Note: This example test is leveraging the Mocha test framework.
-// Please refer to their documentation on https://mochajs.org/ for help.
-//
+// import * as vscode from 'vscode'
 
-// The module 'assert' provides assertion methods from node
-import * as assert from 'assert'
+// import Selection = vscode.Selection
+// import Range = vscode.Range
+// import Position = vscode.Position
+// import Window = vscode.window
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-// import * as vscode from 'vscode';
-// import * as myExtension from '../extension';
+// import {stripIndent} from 'common-tags'
 
-// Defines a Mocha test suite to group tests of similar kind together
-import {toggleStrike} from '../model/Strike'
+// const normalLine1 = 'function twoPlusTwo(){'
+// const normalLine2 = 'return 2+2'
+// const normalLine3 = '}'
 
-suite("Strike", function () {
-    test("transforms normal text into striketrough text", function() {
-        assert.equal(
-            toggleStrike("this test works!")
-            ,"t̶h̶i̶s̶ t̶e̶s̶t̶ w̶o̶r̶k̶s̶!̶"
-        )
-    })
+// const strikedLine1 = 'f̶u̶n̶c̶t̶i̶o̶n̶ ̶t̶w̶o̶P̶l̶u̶s̶T̶w̶o̶(̶)̶{̶'
+// const strikedLine2 = 'r̶e̶t̶u̶r̶n̶ ̶2̶+̶2̶'
+// const strikedLine3 = '}̶'
 
-    test("transforms striketrough text back into normal text", function(){
-        assert.equal(
-            toggleStrike("t̶h̶i̶s̶ ̶t̶e̶s̶t̶ ̶w̶o̶r̶k̶s̶!̶")
-            ,"this test works!"
-        )
-    })
+// const nonWhitespaceStrikedLine1 = 'f̶u̶n̶c̶t̶i̶o̶n̶ t̶w̶o̶P̶l̶u̶s̶T̶w̶o̶(̶)̶{̶'
+// const nonWhitespaceStrikedLine2 = 'r̶e̶t̶u̶r̶n̶ 2̶+̶2̶'
+// const nonWhitespaceStrikedLine3 = '}̶'
 
-    test("transforms mixed text into normal text", function(){
-        assert.equal(
-            toggleStrike("this ̶t̶est̶ w̶o̶rk̶s̶!̶")
-            ,"this test works!"
-        )
-    })
+// const normalReferenceText = stripIndent`
+//     ${normalLine1}
+//         ${normalLine2}
+//     ${normalLine3}
+// `
 
-    test("ignores boundary chars", function(){
-        assert.equal(
-            toggleStrike(" boundary ")
-            ," b̶o̶u̶n̶d̶a̶r̶y̶ "
-        )
-    })
+// const strikedReferenceText = stripIndent`
+//     ${strikedLine1}
+//      ̶ ̶ ̶ ̶${strikedLine2}
+//     ${strikedLine3}
+// `
 
-    test("ignores boundary chars in multiline strings", function(){
-        assert.equal(
-            toggleStrike(`
-                boundary 
-                boundary
-            `)
-            ,(`
-                b̶o̶u̶n̶d̶a̶r̶y̶ 
-                b̶o̶u̶n̶d̶a̶r̶y̶
-            `)
-        )
-    })
+// const nonWhitespaceStrikedReferenceText = stripIndent`
+//     ${nonWhitespaceStrikedLine1}
+//         ${nonWhitespaceStrikedLine2}
+//     ${nonWhitespaceStrikedLine3}
+// `
+
+// function selectAll(){
+//     if(Window.activeTextEditor){
+//         let activeEditor: vscode.TextEditor = Window.activeTextEditor
+        
+        
+//         activeEditor.selections = [new Selection(
+//             new Position(1, normalLine1.length),
+//             new Position(3, normalLine3.length)
+//         )]
+//     }
+// }
+
+// function getCurrentSelectionText(){
+//     if(Window.activeTextEditor){
+//         let activeEditor: vscode.TextEditor = Window.activeTextEditor
+//         let document: vscode.TextDocument = activeEditor.document
+//         let selection = activeEditor.selection
+
+//         return document.getText(new Range(selection.start, selection.end))
+//     }
+// }
+
+suite("Extension", function(){
+
+    // test("Strikes whitespace when configuration is set to true", function(){
+    //     vscode.workspace.getConfiguration('strike').update('whitespace', true)
+        
+    // })
+
+    // test("Doesn't strikes whitespace when configuration is set to false", function(){
+    //     vscode.workspace.getConfiguration('strike').update('whitespace', false)
+
+    //     let WorkspaceEdit = vscode.WorkspaceEdit
+
+    //     const edit = new WorkspaceEdit()
+
+    //     edit.createFile()
+        
+    //     vscode.workspace
+    //         .applyEdit()
+    //         .openTextDocument({content: normalReferenceText})
+    //         .then(document => {
+                
+    //             selectAll()
+    //             const text = getCurrentSelectionText()
+    //             debugger
+    //         })
+    // })
 })

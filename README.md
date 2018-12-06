@@ -16,20 +16,24 @@ You can either use this extension searching for "Strikethrough selected text" in
 
 ## Release Notes
 
-### Unreleased
+### 3.0.0 - 2018-12-06
 
-Default strike toggling keybinding is now `⌘K + Backspace` on Mac or `⌃K + Backspace` on other platforms.
+Default strike toggling keybinding is now `⌘K + Backspace` on Mac and `⌃K + Backspace` on other platforms.
 
-### 2.0.1
+### 2.0.1 - 2018-12-06
 
 Writing a proper README
 
-### 2.0.0
+### 2.0.0 - 2018-12-05
 
 Whitespace chars are no more striked by default. 
 There is a setting to enable or disable whitespace strike.
 
-### 1.0.0
+### 1.0.1 - 2018-10-25
+
+Fixed strike removal broken on new VSCode update.
+
+### 1.0.0 - 2018-08-23
 
 Initial release of Strike
 

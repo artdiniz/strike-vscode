@@ -3,7 +3,7 @@ All notable changes to the "strike" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased] - 2018-12-06
+## [3.0.0] - 2018-12-06
 - Changed default keybinding from `Ctrl+k` `s` to `Ctrl+k` `Backspace`.
 
 ## [2.0.1] - 2018-12-06

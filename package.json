@@ -46,8 +46,8 @@
         ],
         "keybindings": {
             "command": "extension.strike.strikethrough",
-            "key": "ctrl+k s",
-            "mac": "cmd+k s",
+            "key": "ctrl+k backspace",
+            "mac": "cmd+k backspace",
             "when": "editorHasSelection"
         }
     },

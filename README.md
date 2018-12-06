@@ -6,7 +6,7 @@ Strikethrough text in a breeze
 
 Toggle strikethrough text from selected text.
 
-You can either use this extension searching for "Strikethrough selected text" in Command Pallete or hitting `⌘K + S`.
+You can either use this extension searching for "Strikethrough selected text" in Command Pallete or hitting `⌘K + Backspace` on macOS or `⌃K + Backspace` on other platforms.
 
 ![Strikethrough text with keyboard shortcut](images/strikethrough-in-action.gif)
 
@@ -15,6 +15,10 @@ You can either use this extension searching for "Strikethrough selected text" in
 * `strike.whitespace`: enable or disable whitespace chars strike. Is disabled by default.
 
 ## Release Notes
+
+### Unreleased
+
+Default strike toggling keybinding is now `⌘K + Backspace` on Mac or `⌃K + Backspace` on other platforms.
 
 ### 2.0.1
 

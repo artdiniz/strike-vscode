@@ -3,7 +3,7 @@ All notable changes to the "strike" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [2.0.1] - 2018-12-06
 ### Added
 - Release notes in Readme
 - Settings info in Readme

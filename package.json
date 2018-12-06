@@ -2,7 +2,7 @@
     "name": "strike-vscode",
     "displayName": "Strike for VSCode",
     "description": "Strikethrough text in a breeze",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "publisher": "artdiniz",
     "author": {
         "name": "Artur Diniz Adam",

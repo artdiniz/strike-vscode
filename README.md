@@ -10,7 +10,20 @@ You can either use this extension searching for "Strikethrough selected text" in
 
 ![Strikethrough text with keyboard shortcut](images/strikethrough-in-action.gif)
 
+## Settings
+
+* `strike.whitespace`: enable or disable whitespace chars strike. Is disabled by default.
+
 ## Release Notes
+
+### 2.0.1
+
+Writing a proper README
+
+### 2.0.0
+
+Whitespace chars are no more striked by default. 
+There is a setting to enable or disable whitespace strike.
 
 ### 1.0.0
 

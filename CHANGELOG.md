@@ -3,7 +3,7 @@ All notable changes to the "strike" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [2.0.0] - 2018-12-05
 ### Changed
 - Whitespace chars are not striked by default.
 
